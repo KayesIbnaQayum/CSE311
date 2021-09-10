@@ -17,7 +17,6 @@
         <style>
             body {
                 font-family: 'Nunito', sans-serif;
-                background-color:#f1f2f4;
             }
         </style>
     </head>
@@ -30,63 +29,69 @@
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2 rounded-pill" style="width:200px" type="search" placeholder="Search" aria-label="Search">
-                
-                    </form>
-                    
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/search">Find work</a>
+                        <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Find Talent
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Find Work
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">My Jobs</a>
+                            <a class="nav-link" href="#">Enterprise</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Messages</a>
+                            <a class="nav-link" href="#">About us</a>
                         </li>
                         </ul>
-                        <img class="img-thumbnail " style="max-height:50px; max-width:80px" src="/img/findjob.jpg" alt="...">
+                        <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2 rounded-pill" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success my-2 my-sm-0 rounded-pill" type="submit">Search</button>
+                        <a href="{{route('login')}}"><button type="button" class="btn btn-success my-2 my-sm-0 rounded-pill  " style="background:#1f57c3; margin-left:20px"  >Login</button></a>
+                        <a href="{{route('reg')}}"><button class="btn my-2 my-sm-0 rounded-pill" type="button">Sign Up</button></a>
+                        </form>
                     </div>
                     </nav>
             </div>
             <div class="container mt-5">
-                <div class="row p-4 rounded" style="background-color:white">
-                        <div class="col-12 mb-4">
-                            <div class="row">
-                                <div class="col-2"> <img class="img-thumbnail " style="max-height:200px; max-width:100px" src="/img/findjob.jpg" alt="..."></div>
-                                <div class="col-8" style="font-size:large; font-weight: bold;">Kayes Ibna Qayum<p style="font-size:small; font-weight:normal">Dhaka, Bangladesh</p></div>
-                                <div class="col-2 ml-auto"><button type="button" class="btn btn-outline-success rounded-pill"><b>Edit Profile</b></button></div>
+                <div class="row">
+                    <div class="col-6">
+                        <img class="img-fluid" src="/img/login.jpg" alt="">
+                    </div>
+                    <div class="col-6 p-4" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 7px 0 rgba(0, 0, 0, 0.19);">
+                        <h2>Login</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  
                             </div>
-                        </div>
-                
-                        <div class="col-2">
-                            <b>Education</b>
-                                <p>CSE at NSU</p>
-                            <b>Language</b>
-                                <p>English</p>
-                            <b>Overall Rating</b>
-                                <p>4.8</p>
-                        </div>
-                        <div class="col-10">
-                            <b>Skills</b><br>
-                            asdasd
-                            <div class="pt-4"><b>Protfolio</b><br>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKRTKaZNWcdS34sKwWOEufSaBTG313pP71KQ&usqp=CAU" class="rounded img-thumbnail" style="max-height:200px; max-width:200px" alt="...">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKRTKaZNWcdS34sKwWOEufSaBTG313pP71KQ&usqp=CAU" class="rounded img-thumbnail" style="max-height:200px; max-width:200px" alt="...">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKRTKaZNWcdS34sKwWOEufSaBTG313pP71KQ&usqp=CAU" class="rounded img-thumbnail" style="max-height:200px; max-width:200px" alt="...">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKRTKaZNWcdS34sKwWOEufSaBTG313pP71KQ&usqp=CAU" class="rounded img-thumbnail" style="max-height:200px; max-width:200px" alt="...">
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                             </div>
-                        </div>
-                    
-                </div>
-                <!--Works history-->
-                <div class="row p-4 rounded mt-3" style="background-color:white">
-                    <b>Work History</b>
-                </div>
-                <!--Certifications-->
-                <div class="row p-4 rounded mt-3" style="background-color:white">
-                    <b>Certifications</b>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                            </div>
+                            <a href="/profile"><button type="button" class="btn btn-primary">Login</button></a>
+                            </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -142,7 +147,7 @@
             <i class="fas fa-gem me-3"></i>BD Freelancer
           </h6>
           <p>
-            asdasdad
+            asdasd
           </p>
         </div>
         <!-- Grid column -->

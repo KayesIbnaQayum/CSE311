@@ -24,3 +24,12 @@ Route::get('/profile', function () {
 Route::get('/search', function () {
     return view('search');
 });
+
+
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
+
+Route::get('/reg', function () {
+    return view('reg');
+})->name('reg');;

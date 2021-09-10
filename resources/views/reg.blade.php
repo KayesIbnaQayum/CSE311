@@ -22,7 +22,7 @@
     </head>
     <body class="antialiased">
             <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light border-bottom my-2 py-2" style="font-size:large; font-weight: bold;">
+                <nav class="navbar navbar-expand-lg navbar-light border-bottom my-2 py-2" style="font-size:large; font-weight: bold; ">
                     <a class="navbar-brand" href="#">Navbar</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -62,74 +62,48 @@
                         <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2 rounded-pill" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-success my-2 my-sm-0 rounded-pill" type="submit">Search</button>
-                        <button class="btn btn-success my-2 my-sm-0 rounded-pill  " style="background:#1f57c3; margin-left:20px" type="submit">Login</button>
-                        <button class="btn my-2 my-sm-0 rounded-pill" type="submit">Sign Up</button>
+                        <a href="{{route('login')}}"><button type="button" class="btn btn-success my-2 my-sm-0 rounded-pill  " style="background:#1f57c3; margin-left:20px"  >Login</button></a>
+                        <a href="{{route('reg')}}"><button class="btn my-2 my-sm-0 rounded-pill" type="button">Sign Up</button></a>
                         </form>
                     </div>
                     </nav>
             </div>
             <div class="container mt-5">
                 <div class="row">
-                    <div class="col-lg-7 col-12">
-                        <h1 class="display-3" style="font-weight: bold;">Bangladesh's First Work marketplace</h1>
-                        <h2>Join millions of businesses and independent pros who do great work together.</h2>
-                        <button class="btn btn-success my-4 my-sm-0 rounded-pill" type="submit">Find Talent</button>
-                        <button class="btn btn-outline-success my-4 my-sm-0 rounded-pill " type="submit">Find Work</button>
+                    <div class="col-6">
+                        <img class="img-fluid" src="/img/registation.jpg" alt="">
                     </div>
-                    <div class="col-lg-5 col-12">
-                        <img class="img-fluid" src="/img/togather.jpg" alt="togather">
+                    <div class="col-6 p-4" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 7px 0 rgba(0, 0, 0, 0.19);">
+                        <h2>Signup</h2>
+                        <form>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="inputEmail4">First Name</label>
+                              <input type="text" class="form-control" id="inputEmail4" placeholder="First Name">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="inputPassword4">LastName</label>
+                              <input type="text" class="form-control" id="inputPassword4" placeholder="Last Name">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="inputAddress">Email</label>
+                            <input type="email" class="form-control" id="inputAddress" placeholder="example@gmail.com">
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="inputEmail4">Password</label>
+                              <input type="password" class="form-control" id="inputEmail4" placeholder="Password">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="inputPassword4">password confirm</label>
+                              <input type="password" class="form-control" id="inputPassword4" placeholder="Password confirm">
+                            </div>
+                          </div>
+
+                          <button type="submit" class="btn btn-primary">Sign up</button>
+                        </form>
                     </div>
-                </div>
-
-                <div class="row border-bottom mt-5 pb-3">
-                    <div class="col-lg-2">
-                         Trusted by
-                    </div>
-                    <div class="col-lg-10">
-                        asdasd
-                    </div>
-                </div>
-                <!--content-->
-                <div class="row mt-5">
-                    <div class="col-lg-6">
-                          <img class="img-fluid" src="/img/findjob.jpg" alt="togather">
-                    </div>
-                    <div class="col-lg-6 rounded pt-3" style="background-color:#1f57c3; color:white">
-                        <h3>For talent</h3>
-                        <h1>Find great work</h1>
-
-                        <p>Meet clients you’re excited to work with and take your career or business to new heights.</p>
-
-                        <div class="row border-top mt-3 pt-2">
-                            <div class="col-lg-4">asdasd</div>
-                            <div class="col-lg-4">asdasd</div>
-                            <div class="col-lg-4">asdasd</div>
-                        </div>
-
-                        <button type="button" class="btn btn-secondary rounded-pill mt-3" style="color:#1f57c3; background:white">Find Works</button>
-                    </div>
-                </div>
-
-                <!--c2-->
-                <div class="row mt-2">
-                <div class="col-lg-6 rounded pt-3" style="color:#497472">
-                        <h3>For talent</h3>
-                        <h1>Find great work</h1>
-
-                        <p>Meet clients you’re excited to work with and take your career or business to new heights.</p>
-
-                        <div class="row border-top mt-3 pt-2">
-                            <div class="col-lg-4">asdasd</div>
-                            <div class="col-lg-4">asdasd</div>
-                            <div class="col-lg-4">asdasd</div>
-                        </div>
-
-                        <button type="button" class="btn btn-outline-secondary rounded-pill mt-3" style="color:#001e00;">Find Works</button>
-                    </div>
-                    <div class="col-lg-6">
-                          <img class="img-fluid" src="/img/findtalent.jpg" alt="togather">
-                    </div>
-
                 </div>
             </div>
         </div>
