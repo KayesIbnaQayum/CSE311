@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\loginVerification;
+use App\Http\Controllers\signupController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +35,6 @@ Route::get('/login', function () {
 Route::get('/reg', function () {
     return view('reg');
 })->name('reg');;
+
+Route::post('login', [loginVerification::class, 'login']);
+Route::post('reg', [signupController::class, 'signup']);
