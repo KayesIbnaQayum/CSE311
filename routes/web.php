@@ -3,7 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\loginVerification;
 use App\Http\Controllers\signupController;
-
+use App\Http\Controllers\projectController;
+use App\Http\Controllers\profileController;
+use App\Http\Controllers\searchController;
+use App\Http\Controllers\jobController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,13 +22,10 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/profile', function () {
-    return view('profile');
-});
+Route::get('/profile',  [profileController::class, 'profileView']);
 
-Route::get('/search', function () {
-    return view('search');
-});
+Route::get('/search/{searchValue}',[searchController::class, 'search']);
+Route::post('searcha',[searchController::class, 'searchfromMenu']);
 
 
 Route::get('/login', function () {
@@ -38,3 +38,29 @@ Route::get('/reg', function () {
 
 Route::post('login', [loginVerification::class, 'login']);
 Route::post('reg', [signupController::class, 'signup']);
+
+
+Route::get('/edit', [profileController::class, 'index']);
+Route::post('/edit', [profileController::class, 'update']);
+
+
+Route::get('/project/{id}', [projectController::class, 'index']);
+
+Route::get('/postjob', function () {
+    return view('postJob');
+});
+
+Route::get('/myjob', [profileController::class, 'myjob']);
+
+Route::get('/bid', function () {
+    return view('bid');
+});
+
+Route::post('/bid', [jobController::class, 'bid']);
+Route::get('/bidlist/{id}', [jobController::class, 'bidlist']);
+Route::post('/bidlist/bidcon', [jobController::class, 'bidcon']);
+
+Route::post('/postjob', [jobController::class, 'postjob']);
+
+
+Route::get('/workprofile',[profileController::class, 'workprofile']);
